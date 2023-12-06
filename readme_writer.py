@@ -39,7 +39,7 @@ class ReadmeWriter:
 
     num_solved = sum(ac_count.values())
 
-    solved_percentage: float = round((num_solved / num_total) * 100, 2)
+    solved_percentage: int = num_solved * 100 // num_total
     solved_badge: str = f"{BADGE_PREFIX}Solved-{num_solved}/{num_total}%20=%20{solved_percentage}%25-blue{BADGE_SUFFIX}"
     easy_badge: str = f"{BADGE_PREFIX}Easy-{ac_count[1]}/{prob_count[1]}-5CB85D{BADGE_SUFFIX}"
     medium_badge: str = f"{BADGE_PREFIX}Medium-{ac_count[2]}/{prob_count[2]}-F0AE4E{BADGE_SUFFIX}"
